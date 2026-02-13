@@ -317,7 +317,8 @@ function celebrate(){
   finalScreen.style.color = "white";
   finalScreen.style.display = "flex";
   finalScreen.style.flexDirection = "column";
-  finalScreen.style.justifyContent = "center";
+  finalScreen.style.justifyContent = "flex-start";
+  finalScreen.style.paddingTop = "12vh";
   finalScreen.style.alignItems = "center";
   finalScreen.style.padding = "30px";
   finalScreen.style.textAlign = "center";
@@ -326,11 +327,12 @@ function celebrate(){
 
  finalScreen.innerHTML = `
   <h1 style="
-  font-size:42px;
-  margin-bottom:30px;
+  font-size:38px;
+  margin-bottom:25px;
   color:#ff1744;
   text-shadow:0 0 20px rgba(255,0,0,0.9);
   font-weight:bold;
+  z-index:10000;
 ">
   Happy Valentine's Day ❤️
 </h1>
@@ -403,7 +405,7 @@ function showLastPage(){
 
  document.body.innerHTML = `
     <div style="
-      min-height:100vh;
+      min-height:100dvh;
       background:linear-gradient(180deg,#000,#1a1a2e);
       display:flex;
       flex-direction:column;
@@ -494,6 +496,7 @@ function moveNoButton() {
 
 </body>
 </html>
+
 
 
 
