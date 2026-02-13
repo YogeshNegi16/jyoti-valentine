@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Jyoti 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Pacifico&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{
+background:linear-gradient(180deg,#0f0f1a,#1a1a2e);
+color:#ffb6d9;
+overflow-x:hidden;
+text-align:center;
+}
+
+/* Cinematic Intro */
+#cinema{
+position:fixed;
+width:100%;
+height:100vh;
+background:black;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+z-index:20;
+animation:fadeOut 3s 4s forwards;
+}
+@keyframes fadeOut{to{opacity:0;visibility:hidden;}}
+
+/* Password */
+#intro{
+position:fixed;width:100%;height:100vh;
+background:#1a1a2e;
+display:flex;justify-content:center;align-items:center;
+flex-direction:column;z-index:15;
+}
+input{padding:10px;border-radius:20px;border:none;text-align:center;}
+button{
+margin-top:15px;padding:10px 25px;border:none;border-radius:25px;
+background:#ff4d88;color:white;font-size:16px;
+}
+
+/* Story Sections */
+.story{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:40px 20px;
+  position:relative;
+}
+
+.story img{
+  width:100%;
+  max-width:400px;
+  border-radius:20px;
+  box-shadow:0 0 20px rgba(255,105,180,0.4);
+}
+
+.caption{
+  margin-top:20px;
+  font-size:18px;
+  max-width:320px;
+  line-height:1.6;
+}
+
+
+/* Final Section */
+#final{
+display:none;
+height:100vh;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+}
+
+h1{
+font-family:'Pacifico',cursive;
+font-size:2.5rem;
+}
+
+#proposal{
+display:none;
+position:fixed;
+top:0;left:0;width:100%;height:100vh;
+background:rgba(0,0,0,0.8);
+justify-content:center;align-items:center;
+}
+.popup{
+background:#1a1a2e;
+padding:30px;border-radius:20px;
+box-shadow:0 0 25px #ff4d88;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+    opacity: 0.8;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div id="cinema">
+<h1>Hii Jyoti 💖</h1>
+<p>A little something for you...</p>
+</div>
+
+<audio id="bgMusic" loop>
+<source src="your-song.mp3" type="audio/mpeg">
+</audio>
+
+<div id="intro">
+<h2>Only Jyoti Can Enter 🔐</h2>
+<input type="password" id="password" placeholder="hint:tumhara fav food">
+<button onclick="enterSite()">Enter</button>
+</div>
+
+<!-- STORY IMAGES -->
+
+<div class="story">
+  <h1 style="
+      font-family:'Pacifico', cursive;
+      font-size:28px;
+      margin-bottom:20px;
+      color:#ff4d88;
+  ">
+    Our Little Love Story 💕
+  </h1>
+
+  <p style="
+      max-width:320px;
+      line-height:1.7;
+      font-size:18px;
+  ">
+    Ye chhota sa surprise bnaya h tumhare liye.
+    I dont know if you'll like it or not but still
+    hmari memories hmare moments tum or m sb isme include krne ki koshish ki h mene.
+    Yaad h wo tumhari story jisme ye likha tha ki January b itni jldi nikl rha h or dekhte hi dekhte ye saal b khtm ho jaaega
+    or fir uspe mene reply kiya tha or fir wahi se hmari kahani ki shuruat hui thi.Or sch hi likha tha usme kyuki itni jldi ye nya saal b aagya.
+    Itni saari memories create krli or tumhare saath ye time kb nikla maalum hi nhi pda.
+  </p>
+</div>
+
+
+<div class="story">
+<img src="photo1.jpg">
+<div class="caption"> ye wali photo meri cutiepiee ki sbse pehle bheji hui photos m se thi jisme kya khubsurat lg rhi thi or mere mn m bss yhi aa rha tha ki isme ye south ki beauty lgti h(or ufffff wo bindi)💕</div>
+</div>
+
+<div class="story">
+<img src="photo2.jpg">
+<div class="caption"> ye pic wo h jo mene sbko dikhayi thi jb pehli baari tumhare baare m btaya tha...ki dekho ye h meri Jyoti...or ye kapde tumne bola tha m jeans top pehnkr gyi hu shadi m✨</div>
+</div>
+
+<div class="story">
+<img src="photo3.jpg">
+<div class="caption">hmari video calls last year isi time start hui thi or ye wo wali nhi h pr merko yaad h ki pehli video call m tumne itna bda tika lga rkha tha🌸</div>
+</div>
+
+<div class="story">
+<img src="photo4.jpg">
+<div class="caption">ye pic...ye pic...haaayeeeeeeeeeeeeeeee...elegance>>>>>>>>>>>>>>....ye pic jb mene dekhi thi na to seriously the first thought that came to my mind was ki ye photo bht jyada special h or pkka kal ko jb apne ghrwalo ko tumhare baare m btaunga tb yhi photo dikhaunga unhe...huihuihui meri trh wo b flat ho jaaenge ise dekhkr...💖</div>
+</div>
+
+<div class="story">
+<img src="photo5.jpg">
+<div class="caption">no matter what you say but everytime i think of you mere dimag m sbse pehle yhi photo aati h...or sbse bdi baat is photo m mere phool k saamne(yaani ki tum)  uske sr pe jo phool lga h wo feeka pd jata h💕</div>
+</div>
+
+<div class="story">
+<img src="photo6.jpg">
+<div class="caption">Aapke janmdin ki is picture ne to meri jaan hi leli thi Samant ji...kese aap itni cute fir uske upr usse b jyada khubsurat ho skti ho...glt baat h ye to...the amount of time i have spent on adoring this pic of you is unhealthy💕</div>
+</div>
+
+<div class="story">
+<img src="photo7.jpg">
+<div class="caption">ye tumhare chhote chhote surprises sahi m dil ki dhadkane itni jyada bdha dete h bta nhi skta m(or apne mittu ko kese bhul skta hu m)💕</div>
+</div>
+
+<div class="story">
+<img src="photo8.jpg">
+<div class="caption">26th June- hmari pehli meeting...kaha hm 2 December ko milne wale the or fir achanak se tumhari khrab scooty k bahane bina kisi plan k yaha mile hm...sb kuch itne ache se yaad h ki jese kal ka hi din ho..wo tumhara merse chhipna...wo mera rose...wo pasta or wo drink...fir tumhara haath pkdna..mera kaampta hua haath...fir wo bench pe tumhara mere kndhe pe srr rkhna...tumhare wo aansu...or mera wo roadside pe bethkr ghr wapas jaane ka mn naa krna or or or or fir tumhari wo kiss💕</div>
+</div>
+
+<div class="story">
+<img src="photo9.jpg">
+<div class="caption">29th June- hmari second meet. M hr meeting k baare m nhi likh rha pr iske baare m likhna jrur bnta h kyuki i dont think ki isse perfect date kuch ho skti h ...khana khaya...movie dekhi...we had our first kiss...then baarish m scooty m itna ghume...momos tumhari fav jgh se...or end m c7 k park m hmari serious talks...everything was so magical💕</div>
+</div>
+
+<div class="story">
+<img src="photo10.jpg">
+<div class="caption">or is kalakaari ko kese bhul skte h...hmara common wallpaper 💕</div>
+</div>
+
+<div class="story">
+<img src="photo11.jpg">
+<div class="caption">tum ho hi itni tasty ki tumhe kha jaane ka jee krta h...isme meri koi glti nhi h madam jii💕</div>
+</div>
+
+<div class="story">
+<img src="photo12.jpg">
+<div class="caption">every moment every memory that we created is so so so much special...baaki is photo m wo baat to sch ho gyi ki jaha phul hote h waha bhanwra chipak jata h💕</div>
+</div>
+
+<div class="story">
+<img src="photo13.jpg">
+<div class="caption">Diwali k saare patakhe fail h mere is patakhe k saamne...💕</div>
+</div>
+
+<div class="story">
+<img src="photo14.jpg">
+<div class="caption">Hmari akshardham ki memory...or tumhare iphone se hm dono ki pehli photo...i just wish ki ese hi aage chlkr tumhare phone ki memory hm dono ki photos se hi bhr jaaye💕</div>
+</div>
+
+<div class="story">
+<img src="photo15.jpg">
+<div class="caption">Itni saari pics m ek photo is pgle ki b dekhlo...ye aapke pyaar m pgla deewana</div>
+</div>
+
+
+<!-- ADD MORE BY COPYING ABOVE BLOCK -->
+
+<div id="final" class="story">
+<h1>huihuihuihui kesa lga? 💖 are pr sbse jruri baat puchni to reh hi gyi...</h1>
+<button onclick="openProposal()">pucho</button>
+</div>
+
+<div id="proposal">
+  <div class="popup">
+    <h2>Will you be my Valentine? 💘</h2>
+
+    <div style="margin-top:20px; position:relative; height:120px;">
+      
+      <button onclick="celebrate()" 
+              style="margin-right:20px;">
+        Yes 💖
+      </button>
+
+      <button id="noBtn" 
+              style="position:absolute;">
+        No 😜
+      </button>
+
+    </div>
+
+  </div>
+</div>
+
+
+<script>
+function enterSite(){
+if(document.getElementById("password").value.toLowerCase()=="pasta"){
+document.getElementById("intro").style.display="none";
+document.getElementById("bgMusic").play();
+showFinalOnScroll();
+}else{
+alert("Hint: White sauce _______");
+}
+}
+
+function showFinalOnScroll(){
+window.addEventListener("scroll",function(){
+if(window.innerHeight + window.scrollY >= document.body.offsetHeight-10){
+document.getElementById("final").style.display="flex";
+}
+});
+}
+
+function openProposal(){
+document.getElementById("proposal").style.display="flex";
+}
+
+function celebrate(){
+
+  // Confetti burst
+  confetti({
+    particleCount: 250,
+    spread: 120,
+    origin: { y: 0.6 }
+  });
+
+  // Hide proposal popup
+  document.getElementById("proposal").style.display = "none";
+
+  // Create final screen
+  const finalScreen = document.createElement("div");
+  finalScreen.style.position = "fixed";
+  finalScreen.style.top = "0";
+  finalScreen.style.left = "0";
+  finalScreen.style.width = "100%";
+  finalScreen.style.height = "100vh";
+  finalScreen.style.background = "#000";
+  finalScreen.style.color = "white";
+  finalScreen.style.display = "flex";
+  finalScreen.style.flexDirection = "column";
+  finalScreen.style.justifyContent = "center";
+  finalScreen.style.alignItems = "center";
+  finalScreen.style.padding = "30px";
+  finalScreen.style.textAlign = "center";
+  finalScreen.style.overflowY = "auto";
+  finalScreen.style.zIndex = "999";
+
+ finalScreen.innerHTML = `
+  <h1 style="
+  font-size:42px;
+  margin-bottom:30px;
+  color:#ff1744;
+  text-shadow:0 0 20px rgba(255,0,0,0.9);
+  font-weight:bold;
+">
+  Happy Valentine's Day ❤️
+</h1>
+
+
+  <p style="
+      line-height:1.9;
+      font-size:18px;
+    "> 
+
+Hii Jyoti, 
+First of all Happy Valentine's Day my love. 
+I know things happened and we went through so much difficult times.
+Still i want to tell you that I Love You Jyoti Samant!!!
+I Love You so so so much!!!
+Time to time i just lose hope in everything,i feel like kuch b nhi bna mere liye is life m.
+But fir tum krti ho apni superhero wali entry
+or meri jitni b dikkate h jo b mere negative thoughts hote h sbki fielding set kr deti ho.
+Aaj valentines h...and you are the first and i want you to be the only valentine of my life
+jisse m hr saal ye puch sku "will you be my valentine?" till i take my last breath.
+Nhi ho tum akeli bilkul b...m hu tumhare saath...bs bhatak jaata hu kbhi kbhar...gussa kr jata hu..
+pr us gusse m b tumhi rehti ho mere mind m 24x7.
+Le hi aati ho merko line pe tum end m.
+No matter hm kitna b lad le kuch b keh le ek dusre ko but the fact is ki tum Jyoti tum tumhari jgh 
+meri life m koi b nhi le skta koi b nhi.You are the love of my life.
+You are the one jo abhi mere saath h jb mere pass kuch b nhi h &
+I want you to be the only one to be with me jb kal mere pass sb kuch hoga.
+Wese to mera ye kehna ki mere pass kuch b nhi h wo bht glt h kyuki Tum ho mere pass or is chz ko 
+m apni strength bna kr life ki saari problems face krunga.
+I am so so lucky to have the most caring,most kind,most loving,most beautiful,the cutest,most amazingly hot
+person like you in my life. So please please always be there as my love,my strength and my everything.
+Happy Valentines Day once again Jyoti.❤️
+  </p>
+
+  <button onclick="showLastPage()" 
+          style="margin-top:30px; padding:12px 25px; border:none; border-radius:25px; background:red; color:white; font-size:16px;">
+    One Last Thing 💌
+  </button>
+`;
+
+  document.body.appendChild(finalScreen);
+
+  startHeartRain();
+}
+
+function startHeartRain(){
+  setInterval(()=>{
+    const heart = document.createElement("div");
+    heart.innerHTML = "❤️";
+    heart.style.position = "fixed";
+    heart.style.top = "-20px";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (Math.random() * 20 + 20) + "px";
+    heart.style.animation = "fall 5s linear forwards";
+    heart.style.zIndex = "1000";
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+      heart.remove();
+    },5000);
+
+  }, 300);
+
+}
+
+
+function showLastPage(){
+  
+  
+
+  const lastPage = document.createElement("div");
+
+  lastPage.style.position = "fixed";
+  lastPage.style.top = "0";
+  lastPage.style.left = "0";
+  lastPage.style.width = "100%";
+  lastPage.style.height = "100vh";
+  lastPage.style.background = "linear-gradient(180deg,#000,#1a1a2e)";
+  lastPage.style.display = "flex";
+  lastPage.style.flexDirection = "column";
+  lastPage.style.justifyContent = "flex-start";
+  lastPage.style.paddingTop = "80px";
+  lastPage.style.alignItems = "center";
+  lastPage.style.textAlign = "center";
+  lastPage.style.padding = "20px";
+  lastPage.style.zIndex = "2000";
+  lastPage.style.color = "white";
+  lastPage.style.overflowY = "auto";
+
+  lastPage.innerHTML = `
+    <h1 style="
+      font-size:36px;
+      font-family:'Pacifico', cursive;
+      color:#ff4d88;
+      text-shadow:0 0 20px rgba(255,0,100,0.7);
+      margin-bottom:20px;
+    ">
+      I Love You Jyoti 💖
+    </h1>
+
+   <img src="our-photo.jpg" 
+     style="
+     width:100%;
+     max-width:500px;
+     max-height:60vh;
+     object-fit:contain;
+     border-radius:20px;
+     box-shadow:0 0 30px rgba(255,105,180,0.6);
+     margin-bottom:20px;
+     ">
+
+
+    <p style="
+      max-width:600px;
+      line-height:1.8;
+      font-size:18px;
+    ">
+      Tum soch rhi hogi ki itni saari photos m se yhi photo mili thi ise lgane ko.
+      Pr mera reason h is photo ko lgane ka.Ye photo hmare pure relation ko summarize krti h.
+      Kese hmesha hm ladte bhidte rehte h jese is photo m hmare sr bhide hue h.
+      But still nzro m dekho kitna pyaar h or yhi reason h ki ek dusre se itna ldne k baad b wapas ek ho jaate h hm.
+      So meri devi ji i know hr relationship m ladai hoti h gussa hota h pr pyaar b utna hi hota h to i just want to say 
+      ki even though i am not perfect but i will do anything and everything to keep you happy. I am sorry for my past mistakes
+      and I promise ki koi kasr nhi chhorunga tumhe pyaar krne m.
+      bs ese hi mere sr se sr jod k rkhna Jyoti.
+      Thank you for being you.  
+      And thank you for being mine.
+      I love you to the moon and back. ❤️
+    </p>
+  `;
+
+
+  document.body.appendChild(lastPage);
+}
+
+
+
+const noBtn = document.getElementById("noBtn");
+
+noBtn.addEventListener("mouseover", moveNoButton);
+noBtn.addEventListener("click", moveNoButton);
+
+function moveNoButton() {
+  const popup = document.querySelector(".popup");
+
+  const maxX = popup.clientWidth - 100;
+  const maxY = popup.clientHeight - 50;
+
+  const randomX = Math.random() * maxX;
+  const randomY = Math.random() * maxY;
+
+  noBtn.style.left = randomX + "px";
+  noBtn.style.top = randomY + "px";
+}
+
+</script>
+
+</body>
+</html>
