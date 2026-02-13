@@ -304,7 +304,7 @@ function celebrate(){
 
   // Disable scrolling
    document.getElementById("mainContent").style.display = "none";
-  document.body.style.overflow = "hidden";
+
 
   // Create final screen
   const finalScreen = document.createElement("div");
@@ -401,7 +401,8 @@ function startHeartRain(){
 
 function showLastPage(){
   
-  
+ document.body.style.overflow = "auto";
+ 
 
  document.body.innerHTML = `
     <div style="
@@ -411,7 +412,7 @@ function showLastPage(){
       flex-direction:column;
       align-items:center;
       justify-content:flex-start;
-      padding:12vh 20px 40px 20px;
+      padding:12vh 20px 60px 20px;
       text-align:center;
       color:white;
       overflow-y:auto;
@@ -496,6 +497,7 @@ function moveNoButton() {
 
 </body>
 </html>
+
 
 
 
