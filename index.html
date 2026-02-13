@@ -16,6 +16,15 @@ overflow-x:hidden;
 text-align:center;
 }
 
+  html, body {
+  height: 100%;
+}
+
+  button:active {
+  transform: scale(0.95);
+}
+
+
 /* Cinematic Intro */
 #cinema{
 position:fixed;
@@ -255,12 +264,14 @@ box-shadow:0 0 25px #ff4d88;
   </div>
 </div>
 
-
+</div>
 <script>
 function enterSite(){
 if(document.getElementById("password").value.toLowerCase()=="pasta"){
 document.getElementById("intro").style.display="none";
-document.getElementById("bgMusic").play();
+const music = document.getElementById("bgMusic");
+music.volume = 0.6;
+music.play().catch(() => {});
 showFinalOnScroll();
 }else{
 alert("Hint: White sauce _______");
@@ -269,7 +280,7 @@ alert("Hint: White sauce _______");
 
 function showFinalOnScroll(){
 window.addEventListener("scroll",function(){
-if(window.innerHeight + window.scrollY >= document.body.offsetHeight-10){
+if(window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 10){
 document.getElementById("final").style.display="flex";
 }
 });
@@ -408,19 +419,20 @@ function showLastPage(){
       font-family:'Pacifico', cursive;
       color:#ff4d88;
       text-shadow:0 0 20px rgba(255,0,100,0.7);
+      margin-bottom:25px;
     ">
       I Love You Jyoti 💖
     </h1>
 
    <img src="our-photo.jpg" 
      style="
-     width:100%;
-     max-width:500px;
+     width:90%;
+     max-width:420px;
      max-height:60vh;
      object-fit:contain;
      border-radius:20px;
      box-shadow:0 0 30px rgba(255,105,180,0.6);
-     margin-bottom:20px;
+     margin-bottom:25px;
      ">
 
 
@@ -445,18 +457,28 @@ function showLastPage(){
   `;
 
 
-  document.body.appendChild(lastPage);
+ 
 }
 
 
 
-const noBtn = document.getElementById("noBtn");
+document.addEventListener("DOMContentLoaded", function(){
 
-noBtn.addEventListener("mouseover", moveNoButton);
-noBtn.addEventListener("click", moveNoButton);
+  const noBtn = document.getElementById("noBtn");
+
+  if(noBtn){
+    noBtn.addEventListener("mouseover", moveNoButton);
+    noBtn.addEventListener("click", moveNoButton);
+  }
+
+});
+
 
 function moveNoButton() {
+   const noBtn = document.getElementById("noBtn");
   const popup = document.querySelector(".popup");
+
+  if(!noBtn || !popup) return;
 
   const maxX = popup.clientWidth - 100;
   const maxY = popup.clientHeight - 50;
@@ -469,8 +491,9 @@ function moveNoButton() {
 }
 
 </script>
-</div>
+
 </body>
 </html>
+
 
 
