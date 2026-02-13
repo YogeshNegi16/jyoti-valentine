@@ -9,7 +9,9 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{
+<body>
+  <div id="mainContent">
+  {
 background:linear-gradient(180deg,#0f0f1a,#1a1a2e);
 color:#ffb6d9;
 overflow-x:hidden;
@@ -107,6 +109,7 @@ box-shadow:0 0 25px #ff4d88;
 
 </style>
 </head>
+</div>
 <body>
 
 <div id="cinema">
@@ -291,6 +294,10 @@ function celebrate(){
   // Hide proposal popup
   document.getElementById("proposal").style.display = "none";
 
+  // Disable scrolling
+   document.getElementById("mainContent").style.display = "none";
+  document.body.style.overflow = "hidden";
+
   // Create final screen
   const finalScreen = document.createElement("div");
   finalScreen.style.position = "fixed";
@@ -321,7 +328,7 @@ function celebrate(){
 </h1>
 
 
-  <p style="
+  <p style="max-width:600px;
       line-height:1.9;
       font-size:18px;
     "> 
@@ -386,32 +393,24 @@ function showLastPage(){
   
   
 
-  const lastPage = document.createElement("div");
-
-  lastPage.style.position = "fixed";
-  lastPage.style.top = "0";
-  lastPage.style.left = "0";
-  lastPage.style.width = "100%";
-  lastPage.style.height = "100vh";
-  lastPage.style.background = "linear-gradient(180deg,#000,#1a1a2e)";
-  lastPage.style.display = "flex";
-  lastPage.style.flexDirection = "column";
-  lastPage.style.justifyContent = "flex-start";
-  lastPage.style.paddingTop = "80px";
-  lastPage.style.alignItems = "center";
-  lastPage.style.textAlign = "center";
-  lastPage.style.padding = "20px";
-  lastPage.style.zIndex = "2000";
-  lastPage.style.color = "white";
-  lastPage.style.overflowY = "auto";
-
-  lastPage.innerHTML = `
+ document.body.innerHTML = `
+    <div style="
+      min-height:100vh;
+      background:linear-gradient(180deg,#000,#1a1a2e);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:flex-start;
+      padding:12vh 20px 40px 20px;
+      text-align:center;
+      color:white;
+      overflow-y:auto;
+    ">
     <h1 style="
       font-size:36px;
       font-family:'Pacifico', cursive;
       color:#ff4d88;
       text-shadow:0 0 20px rgba(255,0,100,0.7);
-      margin-bottom:20px;
     ">
       I Love You Jyoti 💖
     </h1>
@@ -445,6 +444,7 @@ function showLastPage(){
       And thank you for being mine.
       I love you to the moon and back. ❤️
     </p>
+    </div>
   `;
 
 
@@ -475,3 +475,4 @@ function moveNoButton() {
 
 </body>
 </html>
+
